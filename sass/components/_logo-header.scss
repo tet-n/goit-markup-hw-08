@@ -1,0 +1,12 @@
+.logo {
+  display: block;
+  font-family: var(--font-secondary);
+  @include fonts(700, 26px, 31px, 0.03em);
+  @extend %link;
+  text-decoration: none;
+  color: var(--color-icon-dark);
+
+  &--accent {
+    color: var(--color-accent-primary);
+  }
+}

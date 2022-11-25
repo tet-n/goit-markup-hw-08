@@ -1,0 +1,29 @@
+.clients__heading {
+  @extend %heading;
+}
+
+.clients__list {
+  display: flex;
+  gap: 30px;
+}
+
+.clients__link {
+  @include centeredFlex(flex);
+
+  padding: 15px 31px;
+  border-radius: 4px;
+  color: var(--color-icon-fill-primary);
+  border: 1px solid var(--color-icon-fill-primary);
+
+  @include transition(color, border-color);
+
+  &:hover,
+  &:focus {
+    color: var(--color-accent-primary);
+    border-color: var(--color-accent-primary);
+  }
+}
+
+.clients__icon {
+  fill: currentColor;
+}

@@ -1,0 +1,31 @@
+.occupation--no-padding {
+  padding-top: 0;
+}
+
+.occupation__heading {
+  @extend %heading;
+}
+
+.occupation__list {
+  display: flex;
+  gap: 30px;
+}
+
+.occupation__thumb {
+  position: relative;
+}
+
+.occupation__title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  padding: 27px 0;
+
+  @include fonts(700, 14px, 16px, 0.03em, uppercase);
+  text-align: center;
+
+  background-color: var(--color-bg-overlay-secondary);
+  color: var(--color-text-secondary);
+}

@@ -1,0 +1,26 @@
+.features__list {
+  display: flex;
+  gap: 30px;
+}
+
+.features__item {
+  flex-basis: calc((100% - 90px) / 4);
+}
+
+.features__thumb {
+  @include centeredFlex(flex);
+  width: 270px;
+  height: 120px;
+  background-color: var(--color-bg-secondary);
+  margin-bottom: 30px;
+}
+
+.features__title {
+  margin-bottom: 10px;
+  @include fonts(700, 14px, 16px, 0.03em, uppercase);
+}
+
+.features__text {
+  @include fonts(400, 14px, 24px, 0.03em);
+  color: var(--color-text-treriary);
+}

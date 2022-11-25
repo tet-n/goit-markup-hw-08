@@ -1,0 +1,137 @@
+.footer {
+  padding: 60px 0;
+  background-color: var(--color-bg-tretiary);
+}
+
+.footer__container {
+  display: flex;
+  align-items: baseline;
+  @include fonts(400, 14px, 24px, 0.03em);
+}
+
+.footer__logo {
+  margin-bottom: 20px;
+  color: var(--color-text-secondary);
+}
+
+// Адреса
+
+.footer__block--margin-rg {
+  margin-right: 91px;
+}
+
+.address {
+  font-style: normal;
+}
+
+.address__text {
+  margin-bottom: 9px;
+
+  color: var(--color-text-secondary);
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__link {
+  @extend %link;
+  color: var(--color-text-footer-contacts);
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: var(--color-accent-primary);
+  }
+}
+
+// Соціальні мережі
+
+.footer__text {
+  margin-bottom: 20px;
+
+  @include fonts(700, 14px, 16px, 0.03em, uppercase);
+
+  color: var(--color-text-secondary);
+}
+
+.footer__social-list {
+  display: flex;
+  gap: 10px;
+}
+
+.footer__social-link {
+  @include socialLink(var(--color-icon-footer-bg), var(--color-text-secondary));
+  @include transition(background-color);
+  &:hover,
+  &:focus {
+    background-color: var(--color-accent-primary);
+  }
+}
+
+.footer__social-icon {
+  fill: currentColor;
+}
+
+// Форма підписки
+
+.footer__block--ml {
+  margin-left: auto;
+}
+
+.mailing-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mailing-form__input {
+  letter-spacing: 0.03em;
+  padding: 14px 15px;
+
+  width: 358px;
+  height: 50px;
+
+  @include fonts(400, 16px, 20px, 0.03em);
+
+  color: var(--color-text-secondary);
+  background-color: transparent;
+
+  border: 1px solid var(--color-border-subscribe-input);
+  border-radius: 4px;
+  outline: none;
+
+  filter: drop-shadow(0px 4px 4px var(--color-shadow-primary));
+
+  &::placeholder {
+    color: var(--color-text-footer-contacts);
+  }
+
+  @include transition(border-color);
+
+  &:hover,
+  &:focus {
+    border-color: var(--color-accent-primary);
+  }
+}
+
+.mailing-form__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  @extend %btn;
+
+  padding-left: 28px;
+  padding-right: 28px;
+  @include transition(background-color, box-shadow);
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-accent-secondary);
+    box-shadow: 0px 4px 4px var(--color-shadow-primary);
+  }
+}
+
+.mailing-form__btn--margin-rg {
+  margin-right: 10px;
+}
