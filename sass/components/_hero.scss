@@ -1,7 +1,7 @@
 .hero {
-  margin: 0 auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  // margin: 0 auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
 
   max-width: 1600px;
 
@@ -12,8 +12,12 @@
   background-color: var(--color-bg-tretiary);
   background-size: cover;
   background-repeat: no-repeat;
-
   background-position: center;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero__heading {
@@ -25,13 +29,18 @@
 .hero__btn {
   @extend %btn;
 
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 24px;
+  padding-right: 24px;
 
   @include transition(background-color);
 
   &:hover,
   &:focus {
     background-color: var(--color-accent-secondary);
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }

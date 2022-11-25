@@ -1,0 +1,123 @@
+// Мобільне меню
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+
+  padding: 48px 40px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--color-bg-primary);
+
+  z-index: 998;
+  transform: translateX(100%);
+
+  @include transition(transform);
+
+  &.is-open {
+    transform: translateX(0);
+  }
+}
+
+// Кнопка закриття мобільного меню
+.mobile-menu__btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  color: var(--color-icon-dark);
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: var(--color-accent-primary);
+  }
+}
+
+.mobile-menu__icon {
+  fill: currentColor;
+}
+
+// Навігація
+.mobile-nav {
+  margin-bottom: auto;
+  @extend %list;
+}
+
+.mobile-nav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-nav__link {
+  @include fonts(500, 40px, 47px, 0.02em);
+  color: var(--color-text-primary);
+
+  @extend %link;
+
+  &--current {
+    color: var(--color-accent-primary);
+  }
+}
+
+// Контакти
+.mobile-contacts {
+  margin-bottom: 64px;
+  @extend %list;
+}
+
+.mobile-contacts__item {
+  @include fonts(500, 24px, 28px, 0.02em);
+  color: var(--color-text-treriary);
+}
+
+.mobile-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+  color: var(--color-accent-primary);
+  @include fonts(500, 34px, 40px, 0.02em);
+}
+
+.mobile-contacts__link {
+  color: currentColor;
+  @extend %link;
+}
+
+// Соціальні мережі
+.mobile-socials {
+  display: flex;
+  gap: 20px;
+  @extend %list;
+}
+
+.mobile-socials__item {
+  position: relative;
+
+  &:not(:last-child)::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 1px;
+    height: 22px;
+    z-index: 999;
+
+    background-color: var(--color-decor-line);
+  }
+}
+
+.mobile-socials__link {
+  @include fonts(500, 18px, 22px, 0.02em);
+
+  color: var(--color-accent-primary);
+  @extend %link;
+}

@@ -4,7 +4,7 @@
 }
 
 .footer__container {
-  display: flex;
+  // display: flex;
   align-items: baseline;
   @include fonts(400, 14px, 24px, 0.03em);
 }
@@ -80,7 +80,7 @@
 }
 
 .mailing-form {
-  display: flex;
+  // display: flex;
   align-items: center;
   gap: 12px;
 }

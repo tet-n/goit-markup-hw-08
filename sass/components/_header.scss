@@ -1,26 +1,20 @@
-.header {
-  border-bottom: 1px solid var(--color-border-header);
-}
-
 .header__container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-.navigation__list {
-  @include centeredFlex(flex, 50px);
+// Мобільне меню
+// Кнопка відкриття мобільного меню
+.header__btn {
+  padding: 10px 0;
 
-  margin-left: 93px;
+  color: var(--color-icon-dark);
 
-  @include fonts(500, 14px, 16px, 0.02em);
-  color: var(--color-text-primary);
-}
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 
-.navigation__link {
-  display: block;
-  padding-top: 31px;
-  padding-bottom: 31px;
-  @extend %link;
   @include transition(color);
 
   &:hover,
@@ -29,55 +23,14 @@
   }
 }
 
-.navigation__link--current {
-  position: relative;
-  color: var(--color-accent-primary);
+.header__icon {
+  fill: currentColor;
+}
 
-  &::after {
-    content: '';
-
-    position: absolute;
-    left: 0;
-    bottom: 0;
-
-    height: 4px;
-    width: 100%;
-
-    background: currentColor;
-    border-radius: 2px;
-  }
+.navigation {
+  display: none;
 }
 
 .contact__list {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-
-  margin-left: auto;
-  color: var(--color-text-treriary);
-
-  @include fonts(500, 14px, 16px, 0.02em);
-}
-
-.contact__link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  position: relative;
-
-  padding-top: 31px;
-  padding-bottom: 31px;
-
-  @extend %link;
-  @include transition(color);
-
-  &:hover,
-  &:focus {
-    color: var(--color-accent-primary);
-  }
-}
-
-.contact__icon {
-  fill: currentColor;
+  display: none;
 }

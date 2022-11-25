@@ -2,10 +2,10 @@
   @extend %heading;
 }
 
-.clients__list {
-  display: flex;
-  gap: 30px;
-}
+// .clients__list {
+//   display: flex;
+//   gap: 30px;
+// }
 
 .clients__link {
   @include centeredFlex(flex);
