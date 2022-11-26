@@ -339,8 +339,8 @@ img {
   padding-bottom: 118px;
   max-width: 1600px;
   text-align: center;
-  background-image: -webkit-gradient(linear, left top, right top, from(var(--color-bg-hero)), to(var(--color-bg-hero))), url("../../images/hero-480-1x.jpg");
-  background-image: linear-gradient(to right, var(--color-bg-hero), var(--color-bg-hero)), url("../../images/hero-480-1x.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--color-bg-hero)), to(var(--color-bg-hero))), url("../images/hero-480-1x.jpg");
+  background-image: linear-gradient(to right, var(--color-bg-hero), var(--color-bg-hero)), url("../images/hero-480-1x.jpg");
   background-color: var(--color-bg-tretiary);
   background-size: cover;
   background-repeat: no-repeat;
@@ -355,8 +355,8 @@ img {
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(var(--color-bg-hero)), to(var(--color-bg-hero))), url("../../images/hero-480-2x.jpg");
-    background-image: linear-gradient(to right, var(--color-bg-hero), var(--color-bg-hero)), url("../../images/hero-480-2x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--color-bg-hero)), to(var(--color-bg-hero))), url("../images/hero-480-2x.jpg");
+    background-image: linear-gradient(to right, var(--color-bg-hero), var(--color-bg-hero)), url("../images/hero-480-2x.jpg");
   }
 }
 .hero__heading {
