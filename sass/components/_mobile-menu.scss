@@ -1,4 +1,31 @@
+// Кнопка відкриття мобільного меню
+.header__btn {
+  padding: 10px 0;
+
+  color: var(--color-icon-dark);
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: var(--color-accent-primary);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.header__icon {
+  fill: currentColor;
+}
+
 // Мобільне меню
+
 .mobile-menu {
   display: flex;
   flex-direction: column;
@@ -21,6 +48,10 @@
 
   &.is-open {
     transform: translateX(0);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }
 
@@ -54,7 +85,7 @@
   @extend %list;
 }
 
-.mobile-nav__item:not(:last-child) {
+.mobile-nav__item {
   margin-bottom: 32px;
 }
 

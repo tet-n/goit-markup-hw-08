@@ -1,19 +1,102 @@
 .header__container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+  }
 }
 
-// Мобільне меню
-// Кнопка відкриття мобільного меню
-.header__btn {
-  padding: 10px 0;
+// Навігація
 
-  color: var(--color-icon-dark);
+.navigation {
+  display: block;
 
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.navigation__list {
+  @extend %list;
+
+  @media screen and (min-width: 768px) {
+    @include centeredFlex(flex, 50px);
+    margin-left: 87px;
+    @include fonts(500, 14px, 16px, 0.02em);
+    color: var(--color-text-primary);
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
+}
+
+.navigation__link {
+  display: block;
+  padding-top: 31px;
+  padding-bottom: 31px;
+  @extend %link;
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: var(--color-accent-primary);
+  }
+  @extend %link;
+}
+
+.navigation__link--current {
+  position: relative;
+  color: var(--color-accent-primary);
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    height: 4px;
+    width: 100%;
+
+    background: currentColor;
+    border-radius: 2px;
+  }
+}
+
+// Контакти
+
+.contact__list {
+  display: none;
+  margin-left: auto;
+  @extend %list;
+  @include fonts(500, 12px, 14px, 0.02em);
+  color: var(--color-text-treriary);
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include centeredFlex(flex, 30px);
+    @include fonts(500, 14px, 16px, 0.02em);
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .contact__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.contact__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  position: relative;
+
+  @extend %link;
 
   @include transition(color);
 
@@ -23,14 +106,17 @@
   }
 }
 
-.header__icon {
+.contact__icon {
   fill: currentColor;
-}
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &--envelope {
+      width: 14px;
+      height: 10px;
+    }
 
-.navigation {
-  display: none;
-}
-
-.contact__list {
-  display: none;
+    &--smartphone {
+      width: 10px;
+      height: 14px;
+    }
+  }
 }
