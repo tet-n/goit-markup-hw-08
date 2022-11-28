@@ -2,10 +2,23 @@
   @extend %heading;
 }
 
-// .clients__list {
-//   display: flex;
-//   gap: 30px;
-// }
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.clients__item {
+  width: calc((100% - 30px) / 2);
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 60px) / 3);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 150px) / 6);
+  }
+}
 
 .clients__link {
   @include centeredFlex(flex);

@@ -26,4 +26,8 @@
   @include fonts(700, 36px, 42px, 0.03em);
   text-align: center;
   color: var(--color-text-primary);
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 30px;
+  }
 }
