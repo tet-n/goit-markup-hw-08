@@ -24,6 +24,12 @@
     0px 1px 1px var(--color-shadow-team-card-two), 0px 2px 1px var(--color-shadow-team-card-three);
   border-radius: 0px 0px 4px 4px;
 
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
   @media screen and (min-width: 768px) {
     width: calc((100% - 30px) / 2);
   }
