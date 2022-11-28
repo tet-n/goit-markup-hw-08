@@ -16,6 +16,7 @@
 .occupation__list {
   display: flex;
   gap: 30px;
+  @extend %list;
 }
 
 .occupation__thumb {

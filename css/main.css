@@ -60,7 +60,7 @@
   text-decoration: none;
 }
 
-.features__list, .contact__list, .navigation__list, .mobile-socials, .mobile-contacts, .mobile-nav {
+.footer__social-list, .address__list, .clients__list, .team__list, .occupation__list, .features__list, .contact__list, .navigation__list, .mobile-socials, .mobile-contacts, .mobile-nav {
   list-style: none;
 }
 
@@ -153,32 +153,6 @@ img {
   .section {
     padding: 94px 0;
   }
-}
-
-.header__btn {
-  padding: 10px 0;
-  color: var(--color-icon-dark);
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  -webkit-transition-property: color, false, false;
-  transition-property: color, false, false;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: var(--timing-function);
-          transition-timing-function: var(--timing-function);
-}
-.header__btn:hover, .header__btn:focus {
-  color: var(--color-accent-primary);
-}
-@media screen and (min-width: 768px) {
-  .header__btn {
-    display: none;
-  }
-}
-
-.header__icon {
-  fill: currentColor;
 }
 
 .mobile-menu {
@@ -343,6 +317,32 @@ img {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+}
+
+.header__btn {
+  padding: 10px 0;
+  color: var(--color-icon-dark);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-transition-property: color, false, false;
+  transition-property: color, false, false;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
+}
+.header__btn:hover, .header__btn:focus {
+  color: var(--color-accent-primary);
+}
+@media screen and (min-width: 768px) {
+  .header__btn {
+    display: none;
+  }
+}
+
+.header__icon {
+  fill: currentColor;
 }
 
 .navigation {
@@ -726,6 +726,7 @@ img {
     gap: 30px;
   }
 }
+
 .team__item {
   text-align: center;
   background-color: var(--color-bg-primary);
@@ -893,7 +894,6 @@ img {
 .address {
   font-style: normal;
 }
-
 .address__text {
   margin-bottom: 9px;
   color: var(--color-text-secondary);

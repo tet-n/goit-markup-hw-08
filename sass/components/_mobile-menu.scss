@@ -1,29 +1,3 @@
-// Кнопка відкриття мобільного меню
-.header__btn {
-  padding: 10px 0;
-
-  color: var(--color-icon-dark);
-
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-
-  @include transition(color);
-
-  &:hover,
-  &:focus {
-    color: var(--color-accent-primary);
-  }
-
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-}
-
-.header__icon {
-  fill: currentColor;
-}
-
 // Мобільне меню
 
 .mobile-menu {

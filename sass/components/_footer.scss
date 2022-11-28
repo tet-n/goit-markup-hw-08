@@ -22,6 +22,10 @@
 
 .address {
   font-style: normal;
+
+  &__list {
+    @extend %list;
+  }
 }
 
 .address__text {
@@ -58,6 +62,7 @@
 .footer__social-list {
   display: flex;
   gap: 10px;
+  @extend %list;
 }
 
 .footer__social-link {
