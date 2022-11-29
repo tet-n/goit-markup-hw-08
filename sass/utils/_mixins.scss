@@ -103,3 +103,16 @@
   color: $color;
   background-color: $bgcolor;
 }
+
+// Сітка
+
+@mixin grid($name, $gap, $numderItems) {
+  .#{$name}__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap;
+  }
+  .#{$name}__item {
+    flex-basis: calc((100% - ($numderItems - 1) * $gap) / $numderItems);
+  }
+}

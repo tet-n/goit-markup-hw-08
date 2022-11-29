@@ -1,6 +1,25 @@
 .filter__list {
-  @include centeredFlex(flex, 8px);
-  margin-bottom: 50px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-items: flex-start;
+
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 767px) {
+  .filter__item {
+    margin-bottom: 15px;
+  }
+  .filter__item:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter__list {
+    @include centeredFlex(flex, 8px);
+    margin-bottom: 50px;
+  }
 }
 
 .filter__btn {
