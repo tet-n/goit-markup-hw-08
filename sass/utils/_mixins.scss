@@ -106,13 +106,6 @@
 
 // Сітка
 
-@mixin grid($name, $gap, $numderItems) {
-  .#{$name}__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: $gap;
-  }
-  .#{$name}__item {
-    flex-basis: calc((100% - ($numderItems - 1) * $gap) / $numderItems);
-  }
+@mixin grid($gap, $numderItems) {
+  flex-basis: calc((100% - ($numderItems - 1) * $gap) / $numderItems);
 }

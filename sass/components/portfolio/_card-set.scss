@@ -1,18 +1,30 @@
-$cardGap: 30px;
-$cardNumder: 3;
-
 .card-set {
-  @include centeredFlex(flex, $cardGap);
+  @extend %list;
+  display: flex;
   flex-wrap: wrap;
+  align-content: stretch;
+  gap: 30px;
 }
 
 .card-set__item {
-  flex-basis: calc((100% - ($cardNumder - 1) * $cardGap) / $cardNumder);
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    @include grid(30px, 1);
+  }
+  @media screen and (min-width: 768px) {
+    @include grid(30px, 2);
+
+    @media screen and (min-width: 1200px) {
+      @include grid(30px, 3);
+    }
+  }
 }
 
 .card-set__link {
   @extend %link;
-  display: block;
+  display: flex;
+  flex-direction: column;
 
   @include transition(box-shadow);
 
@@ -52,6 +64,7 @@ $cardNumder: 3;
 }
 
 .card-set__wrapper {
+  flex: 1 0 auto;
   padding: 20px 23px 19px;
   border: 1px solid var(--color-border-card);
   border-top: none;
