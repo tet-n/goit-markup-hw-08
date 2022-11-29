@@ -1310,8 +1310,8 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  height: 581px;
+  width: 80%;
+  height: 80%;
   -webkit-transform: translate(-50%, -50%) scale(1) rotate(0deg);
           transform: translate(-50%, -50%) scale(1) rotate(0deg);
   -webkit-box-shadow: 0px 1px 3px var(--color-shadow-team-card-one), 0px 1px 1px var(--color-shadow-team-card-two), 0px 2px 1px var(--color-shadow-team-card-three);
@@ -1327,9 +1327,21 @@ img {
   -webkit-transition-timing-function: var(--timing-function);
           transition-timing-function: var(--timing-function);
 }
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
 .backdrop--is-hidden .modal {
   -webkit-transform: translate(-50%, -50%) scale(1.5) rotate(-90deg);
           transform: translate(-50%, -50%) scale(1.5) rotate(-90deg);
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__btn {
@@ -1473,10 +1485,18 @@ img {
           align-items: center;
   margin-bottom: 30px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--color-text-treriary);
+}
+@media screen and (min-width: 1200px) {
+  .order-form__check-label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .order-form__check-input {
