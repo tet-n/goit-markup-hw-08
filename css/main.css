@@ -60,7 +60,7 @@
   text-decoration: none;
 }
 
-.card-set, .filter__list, .footer__social-list, .address__list, .clients__list, .team__list, .occupation__list, .features__list, .contact__list, .navigation__list, .mobile-socials, .mobile-contacts, .mobile-nav {
+.card-set, .filter__list, .footer__social-list, .address__list, .clients__list, .team__social-list, .team__list, .occupation__list, .features__list, .contact__list, .navigation__list, .mobile-socials, .mobile-contacts, .mobile-nav {
   list-style: none;
 }
 
@@ -233,6 +233,15 @@ img {
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: var(--color-text-primary);
+  -webkit-transition-property: color, false, false;
+  transition-property: color, false, false;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
+}
+.mobile-nav__link:hover, .mobile-nav__link:focus {
+  color: var(--color-accent-primary);
 }
 .mobile-nav__link--current {
   color: var(--color-accent-primary);

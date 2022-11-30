@@ -68,6 +68,12 @@
   color: var(--color-text-primary);
 
   @extend %link;
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: var(--color-accent-primary);
+  }
 
   &--current {
     color: var(--color-accent-primary);
