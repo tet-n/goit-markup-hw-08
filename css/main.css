@@ -555,7 +555,10 @@ img {
   }
 }
 .hero__heading {
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
+  max-width: 696px;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.62;
