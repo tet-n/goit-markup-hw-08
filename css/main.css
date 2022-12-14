@@ -460,6 +460,7 @@ img {
   z-index: 998;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
+  overflow-y: scroll;
   -webkit-transition-property: false, false, -webkit-transform;
   transition-property: false, false, -webkit-transform;
   transition-property: transform, false, false;
