@@ -387,6 +387,9 @@ body {
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 h1,
 h2,
