@@ -6,6 +6,8 @@ const getSections = function (entries, observer) {
     return;
   }
   entry.target.classList.remove('section--hidden');
+  // Знімаємо оглядач
+  observer.unobserve(entry.target);
 };
 const sectionObserver = new IntersectionObserver(getSections, {
   root: null,
