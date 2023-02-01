@@ -6,10 +6,11 @@
 }
 
 .section--appear {
-  transition: transform 350ms ease-in-out, opacity 350ms ease-in-out;
+  transition: transform 350ms ease-in-out, opacity 350ms ease-in-out, filter 350ms ease-in-out;
 }
 
 .section--hidden {
   opacity: 0;
   transform: translateY(50px);
+  filter: blur(20px);
 }

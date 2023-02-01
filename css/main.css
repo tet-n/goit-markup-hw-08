@@ -446,16 +446,18 @@ img {
 }
 
 .section--appear {
-  -webkit-transition: opacity 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
-  transition: opacity 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
-  transition: transform 350ms ease-in-out, opacity 350ms ease-in-out;
-  transition: transform 350ms ease-in-out, opacity 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
+  -webkit-transition: opacity 350ms ease-in-out, -webkit-transform 350ms ease-in-out, -webkit-filter 350ms ease-in-out;
+  transition: opacity 350ms ease-in-out, -webkit-transform 350ms ease-in-out, -webkit-filter 350ms ease-in-out;
+  transition: transform 350ms ease-in-out, opacity 350ms ease-in-out, filter 350ms ease-in-out;
+  transition: transform 350ms ease-in-out, opacity 350ms ease-in-out, filter 350ms ease-in-out, -webkit-transform 350ms ease-in-out, -webkit-filter 350ms ease-in-out;
 }
 
 .section--hidden {
   opacity: 0;
   -webkit-transform: translateY(50px);
           transform: translateY(50px);
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
 }
 
 .mobile-menu {
