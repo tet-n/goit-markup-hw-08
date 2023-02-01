@@ -1,7 +1,15 @@
 .section {
   padding: 60px 0;
-
   @media screen and (min-width: 1200px) {
     padding: 94px 0;
   }
+}
+
+.section--appear {
+  transition: transform 350ms ease-in-out, opacity 350ms ease-in-out;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(50px);
 }

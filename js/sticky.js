@@ -14,5 +14,6 @@ const getStickyHeader = function (entries) {
 const heroObserver = new IntersectionObserver(getStickyHeader, {
   root: null,
   threshold: 1,
+  // rootMargin: '20px',
 });
 heroObserver.observe(heroRef);
