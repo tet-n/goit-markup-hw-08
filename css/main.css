@@ -1905,4 +1905,8 @@ img {
   background-color: var(--color-accent-secondary);
   -webkit-box-shadow: 0px 4px 4px var(--color-shadow-primary);
           box-shadow: 0px 4px 4px var(--color-shadow-primary);
+}
+
+.order-form__btn[disabled] {
+  background-color: #929292;
 }/*# sourceMappingURL=main.css.map */
