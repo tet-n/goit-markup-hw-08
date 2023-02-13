@@ -379,6 +379,7 @@ summary {
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -389,6 +390,8 @@ body {
 }
 body.no-scroll {
   overflow: hidden;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 h1,

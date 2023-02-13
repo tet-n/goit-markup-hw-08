@@ -30,11 +30,13 @@ const refs = {
 // Функція для закриття (додається клас backdrop--is-hidden)
 function closeModal() {
   refs.modal.classList.add('backdrop--is-hidden');
+  refs.body.classList.remove('no-scroll');
 }
 
 function onOpenModalClick(e) {
   e.preventDefault();
   refs.modal.classList.remove('backdrop--is-hidden');
+  refs.body.classList.add('no-scroll');
 
   // Якщо форма відкрита додаємо слухачі на закриття з кнопки, по кліку на бекдропі, по кліку на кнопці закриття
   document.addEventListener('keydown', closeModalByKeyboard);

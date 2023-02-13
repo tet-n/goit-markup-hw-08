@@ -1,14 +1,16 @@
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 body {
   font-family: var(--font-primary);
   font-style: normal;
-
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
 
   &.no-scroll {
     overflow: hidden;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
