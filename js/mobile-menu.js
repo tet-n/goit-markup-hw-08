@@ -1,16 +1,16 @@
 (() => {
-  const mobileMenu = document.querySelector('.js-menu-container');
+  const mobileMenu = document.querySelector('.js-menu-container'); //overlay
   const openMenuBtn = document.querySelector('.js-open-menu');
   const closeMenuBtn = document.querySelector('.js-close-menu');
+  let scrollPos = window.scrollY;
+
+  const html = document.querySelector('html');
+  const body = document.querySelector('body');
 
   const toggleMenu = () => {
     const isMenuOpen = openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
-    if (isMenuOpen) {
-      document.addEventListener('scroll', onScroll, { passive: false });
-    } else {
-      document.removeEventListener('scroll', onScroll);
-    }
-
+    html.classList.toggle('no-scroll');
+    body.classList.toggle('no-scroll');
     openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
     mobileMenu.classList.toggle('is-open');
 
@@ -29,8 +29,3 @@
     // bodyScrollLock.enableBodyScroll(document.body);
   });
 })();
-
-function onScroll(e) {
-  e.preventDefault();
-  window.scrollTo(0, 0);
-}

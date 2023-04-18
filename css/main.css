@@ -394,6 +394,16 @@ body.no-scroll {
   padding-left: 0;
 }
 
+html.no-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+body.no-scroll {
+  height: 100%;
+  overflow-y: scroll;
+}
+
 h1,
 h2,
 h3,
