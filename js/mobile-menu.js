@@ -4,12 +4,10 @@
   const closeMenuBtn = document.querySelector('.js-close-menu');
   let scrollPos = window.scrollY;
 
-  const html = document.querySelector('html');
   const body = document.querySelector('body');
 
   const toggleMenu = () => {
     const isMenuOpen = openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
-    html.classList.toggle('no-scroll');
     body.classList.toggle('no-scroll');
     openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
     mobileMenu.classList.toggle('is-open');

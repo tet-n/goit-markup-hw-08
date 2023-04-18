@@ -9,18 +9,8 @@ body {
   color: var(--color-text-primary);
 
   &.no-scroll {
-    overflow: hidden;
+    overflow-anchor: none;
     padding-right: 0;
     padding-left: 0;
   }
-}
-
-html.no-scroll {
-  height: 100%;
-  overflow: hidden;
-}
-
-body.no-scroll {
-  height: 100%;
-  overflow-y: scroll;
 }
