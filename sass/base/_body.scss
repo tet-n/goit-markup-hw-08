@@ -9,8 +9,10 @@ body {
   color: var(--color-text-primary);
 
   &.no-scroll {
-    overflow-anchor: none;
-    padding-right: 0;
-    padding-left: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }
